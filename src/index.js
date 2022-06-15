@@ -53,11 +53,24 @@ render(){
 
 }
 class square extends React.Component{
+    //create constructor to initalize state to store current x value
+    constructor(){
+        //parent class instance variable
+        super()
+        this.state={
+            value:null,
+        };
+    }
     render(){
         return(
-            <button className="square">{this.props.value}
+            // fill the square component with x when we click it
+            <button className="square" onClick={()=>this.setState({value:'X'})}
+          >
+               {this.state.value}
+            
 
             </button>
+        
         )
     }
 }
